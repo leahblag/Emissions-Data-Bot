@@ -1,0 +1,113 @@
+:root {
+    --primary-color: #8da8b9; /* Soft Blue */
+    --secondary-color: #2ecc71; /* Green */
+    --accent-color: #e74c3c; /* Red */
+    --background-color: #63243c; /* Dark Purple */
+    --text-color: #f5f5f5; /* Light Text */
+    --border-color: rgba(141, 168, 185, 0.2); /* Light border for depth */
+    --font-family: 'Roboto', sans-serif; /* Font */
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    line-height: 1.6; /* Improve readability */
+}
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em; /* Larger heading */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown {
+    margin-bottom: 20px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.dropdown:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.graph {
+    margin: 20px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.graph:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.button {
+    background-color: var(--primary-color);
+    background-image: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1.2em; /* Increase font size for buttons */
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .dropdown {
+        width: 90%;
+    }
+}
+
+.loader {
+    border: 8px solid rgba(255, 255, 255, 0.1); /* Light grey */
+    border-top: 8px solid var(--primary-color); /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
